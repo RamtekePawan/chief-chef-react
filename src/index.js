@@ -3,6 +3,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import "bootstrap/dist/css/bootstrap.css";
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import { SocialIcon } from 'react-social-icons';
+import { Formik } from 'formik';
+import { object, string, number, date, InferType } from 'yup';
+
+import { ControlLabel, 
+        FormControl,
+        HelpBlock,
+        Form,
+        Col,
+        FormGroup,
+        Checkbox } from 'react-bootstrap'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
