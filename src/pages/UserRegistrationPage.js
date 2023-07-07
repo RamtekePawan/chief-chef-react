@@ -1,18 +1,19 @@
 import React, { useState } from "react";
 import { useFormik } from "formik";
 import { signUpSchema } from "./schemas/Index";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 const UserRegistrationPage = () => {
+
+  const navigate = useNavigate();
   const initialValues = {
     name: "",
     email: "",
     password: "",
     confirm_password: "",
   };
-  let [isSuccess, setIsSuccess] = useState(false);
-  let [isError, setIsError] = useState(false);
+
 
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
     useFormik({
@@ -40,6 +41,7 @@ const UserRegistrationPage = () => {
           }
           action.resetForm();
           alert("Welcome to Chief Chef!!!");
+          navigate("/login", { replace: true });
         } catch (err) {
           setIsError(true);
           alert(err.message);
