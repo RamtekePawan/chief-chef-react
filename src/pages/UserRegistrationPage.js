@@ -13,7 +13,8 @@ const UserRegistrationPage = () => {
     password: "",
     confirm_password: "",
   };
-
+  let [isSuccess, setIsSuccess] = useState(false);
+  let [isError, setIsError] = useState(false);
 
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
     useFormik({
