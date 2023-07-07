@@ -50,7 +50,7 @@ function MyNavigationLinks(props) {
                   Chefs Panel
                 </Nav.Link>}
 
-              {false &&  userLoginData &&
+              {userLoginData &&
                 <Nav.Link as={Link} to={"/chef-profile"}>
                   Chef Profile
                 </Nav.Link>}

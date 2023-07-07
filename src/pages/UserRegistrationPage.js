@@ -38,7 +38,7 @@ const UserRegistrationPage = () => {
             let erroMessage = await res.text();
             throw new Error(erroMessage);
           }
-          // action.resetForm();
+          action.resetForm();
           alert("Welcome to Chief Chef!!!");
         } catch (err) {
           setIsError(true);
@@ -79,7 +79,7 @@ const UserRegistrationPage = () => {
                   onBlur={handleBlur}
                 />
                 {touched.name && errors.name && (
-                  <div className="invalid-feedback">{errors.name}</div>
+                  <div className="form-error text-danger">{errors.name}</div>
                 )}
               </div>
               <div className="form-group">
@@ -96,7 +96,7 @@ const UserRegistrationPage = () => {
                   onBlur={handleBlur}
                 />
                 {touched.email && errors.email && (
-                  <div className="invalid-feedback">{errors.email}</div>
+                  <div className="form-error text-danger">{errors.email}</div>
                 )}
               </div>
               <div className="form-group">
@@ -113,7 +113,7 @@ const UserRegistrationPage = () => {
                   onBlur={handleBlur}
                 />
                 {touched.password && errors.password && (
-                  <div className="invalid-feedback">{errors.password}</div>
+                  <div className="form-error text-danger">{errors.password}</div>
                 )}
               </div>
               <div className="form-group">
@@ -130,7 +130,7 @@ const UserRegistrationPage = () => {
                   onBlur={handleBlur}
                 />
                 {touched.confirm_password && errors.confirm_password && (
-                  <div className="invalid-feedback">{errors.confirm_password}</div>
+                  <div className="form-error text-danger">{errors.confirm_password}</div>
                 )}
               </div>
               <div className="text-center mt-4">
